@@ -1,0 +1,268 @@
+[0604-14:36:00][MainThread][I][log.py:57]: No exception node to handle exception.
+[0604-14:40:08][MainThread][I][log.py:57]: No exception node to handle exception.
+[0604-14:42:19][MainThread][I][log.py:57]: No exception node to handle exception.
+[0604-14:43:36][MainThread][I][log.py:57]: No exception node to handle exception.
+[0604-14:43:52][MainThread][D][log.py:57]: macro process: _local_ string, _local_
+[0604-14:43:54][MainThread][D][log.py:57]: exception: error('unterminated character set at position 24')
+[0604-14:43:54][MainThread][D][log.py:57]: Traceback (most recent call last):
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/decorator.py", line 30, in wrapper
+    result = func(*args, **kwargs)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/ruler.py", line 101, in run
+    return operator_func(left_value, right_value)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/ruler.py", line 18, in _regex_proc
+    match_pattern = re.compile(pattern)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/re.py", line 234, in compile
+    return _compile(pattern, flags)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/re.py", line 286, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/sre_compile.py", line 764, in compile
+    p = sre_parse.parse(p, flags)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/sre_parse.py", line 930, in parse
+    p = _parse_sub(source, pattern, flags & SRE_FLAG_VERBOSE, 0)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/sre_parse.py", line 426, in _parse_sub
+    not nested and not items))
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/sre_parse.py", line 532, in _parse
+    source.tell() - here)
+re.error: unterminated character set at position 24
+
+[0604-14:43:54][MainThread][I][log.py:57]: No exception node to handle exception.
+[0604-14:43:54][MainThread][D][log.py:57]: Not trek project under home path. [/Users/sero/dev/pentium/core.tool.python.mflow/aaaaa/bin]
+[0604-14:43:54][MainThread][D][log.py:57]: Not trek project under home path. [/Users/sero/dev/pentium/core.tool.python.mflow/aaaaa/mydemo]
+[0604-14:43:54][MainThread][D][log.py:57]: Not trek project under home path. [/Users/sero/dev/pentium/core.tool.python.mflow/aaaaa/myexcp]
+[0604-14:43:54][MainThread][D][log.py:57]: Not trek project under home path. [/Users/sero/dev/pentium/core.tool.python.mflow/aaaaa/build]
+[0604-14:43:54][MainThread][D][log.py:57]: Traceback (most recent call last):
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/decorator.py", line 30, in wrapper
+    result = func(*args, **kwargs)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/ruler.py", line 101, in run
+    return operator_func(left_value, right_value)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/ruler.py", line 18, in _regex_proc
+    match_pattern = re.compile(pattern)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/re.py", line 234, in compile
+    return _compile(pattern, flags)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/re.py", line 286, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/sre_compile.py", line 764, in compile
+    p = sre_parse.parse(p, flags)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/sre_parse.py", line 930, in parse
+    p = _parse_sub(source, pattern, flags & SRE_FLAG_VERBOSE, 0)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/sre_parse.py", line 426, in _parse_sub
+    not nested and not items))
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/sre_parse.py", line 532, in _parse
+    source.tell() - here)
+re.error: unterminated character set at position 24
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/decorator.py", line 16, in wrapper
+    result = func(*args, **kwargs)
+  File "/Users/sero/.virtualenvs/test/bin/trek.py", line 370, in run
+    run_projects(path, detail, int(next_interval), auto, once)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/core.py", line 109, in run_projects
+    mgr.run(display_action_logs, next_interval, auto, once)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/manager.py", line 113, in run
+    self.flows_func("run", display_action_logs, next_interval, auto, once)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/manager.py", line 101, in flows_func
+    raise e
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/manager.py", line 98, in flows_func
+    getattr(flow, func_name)(*args, **kwargs)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/project/mflow.py", line 426, in run
+    self.workflow.run(event_data, next_interval)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/workflow.py", line 232, in run
+    self.exception_handling(e, event_data, source_node, target_node)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/workflow.py", line 240, in exception_handling
+    raise exception
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/workflow.py", line 225, in run
+    target_node = target_node.next(node_results)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/node.py", line 46, in next
+    if val.edge.can_go(data):
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/edge.py", line 53, in can_go
+    return ruler.run(self.filters, node_results)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/decorator.py", line 37, in wrapper
+    raise exception_cls(error_msg, **except_kwargs)
+pnmflow.exceptions.WorkflowRulerError: ruler error => unterminated character set at position 24
+
+[0604-14:43:54][MainThread][D][log.py:57]: [run] time: 1.8533272743225098
+[0604-14:44:55][MainThread][D][log.py:57]: macro process: _local_ string, _local_
+[0604-14:44:56][MainThread][D][log.py:57]: exception: error('unterminated character set at position 25')
+[0604-14:44:56][MainThread][D][log.py:57]: Traceback (most recent call last):
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/decorator.py", line 30, in wrapper
+    result = func(*args, **kwargs)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/ruler.py", line 101, in run
+    return operator_func(left_value, right_value)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/ruler.py", line 18, in _regex_proc
+    match_pattern = re.compile(pattern)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/re.py", line 234, in compile
+    return _compile(pattern, flags)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/re.py", line 286, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/sre_compile.py", line 764, in compile
+    p = sre_parse.parse(p, flags)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/sre_parse.py", line 930, in parse
+    p = _parse_sub(source, pattern, flags & SRE_FLAG_VERBOSE, 0)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/sre_parse.py", line 426, in _parse_sub
+    not nested and not items))
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/sre_parse.py", line 532, in _parse
+    source.tell() - here)
+re.error: unterminated character set at position 25
+
+[0604-14:44:56][MainThread][I][log.py:57]: No exception node to handle exception.
+[0604-14:44:56][MainThread][D][log.py:57]: Not trek project under home path. [/Users/sero/dev/pentium/core.tool.python.mflow/aaaaa/bin]
+[0604-14:44:56][MainThread][D][log.py:57]: Not trek project under home path. [/Users/sero/dev/pentium/core.tool.python.mflow/aaaaa/mydemo]
+[0604-14:44:56][MainThread][D][log.py:57]: Not trek project under home path. [/Users/sero/dev/pentium/core.tool.python.mflow/aaaaa/myexcp]
+[0604-14:44:56][MainThread][D][log.py:57]: Not trek project under home path. [/Users/sero/dev/pentium/core.tool.python.mflow/aaaaa/build]
+[0604-14:44:56][MainThread][D][log.py:57]: Traceback (most recent call last):
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/decorator.py", line 30, in wrapper
+    result = func(*args, **kwargs)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/ruler.py", line 101, in run
+    return operator_func(left_value, right_value)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/ruler.py", line 18, in _regex_proc
+    match_pattern = re.compile(pattern)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/re.py", line 234, in compile
+    return _compile(pattern, flags)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/re.py", line 286, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/sre_compile.py", line 764, in compile
+    p = sre_parse.parse(p, flags)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/sre_parse.py", line 930, in parse
+    p = _parse_sub(source, pattern, flags & SRE_FLAG_VERBOSE, 0)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/sre_parse.py", line 426, in _parse_sub
+    not nested and not items))
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/sre_parse.py", line 532, in _parse
+    source.tell() - here)
+re.error: unterminated character set at position 25
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/decorator.py", line 16, in wrapper
+    result = func(*args, **kwargs)
+  File "/Users/sero/.virtualenvs/test/bin/trek.py", line 370, in run
+    run_projects(path, detail, int(next_interval), auto, once)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/core.py", line 109, in run_projects
+    mgr.run(display_action_logs, next_interval, auto, once)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/manager.py", line 113, in run
+    self.flows_func("run", display_action_logs, next_interval, auto, once)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/manager.py", line 101, in flows_func
+    raise e
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/manager.py", line 98, in flows_func
+    getattr(flow, func_name)(*args, **kwargs)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/project/mflow.py", line 426, in run
+    self.workflow.run(event_data, next_interval)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/workflow.py", line 232, in run
+    self.exception_handling(e, event_data, source_node, target_node)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/workflow.py", line 240, in exception_handling
+    raise exception
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/workflow.py", line 225, in run
+    target_node = target_node.next(node_results)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/node.py", line 46, in next
+    if val.edge.can_go(data):
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/edge.py", line 53, in can_go
+    return ruler.run(self.filters, node_results)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/decorator.py", line 37, in wrapper
+    raise exception_cls(error_msg, **except_kwargs)
+pnmflow.exceptions.WorkflowRulerError: ruler error => unterminated character set at position 25
+
+[0604-14:44:56][MainThread][D][log.py:57]: [run] time: 1.9438257217407227
+[0604-14:45:20][MainThread][D][log.py:57]: macro process: _local_ string, _local_
+[0604-14:45:22][MainThread][D][log.py:57]: exception: error('unterminated character set at position 23')
+[0604-14:45:22][MainThread][D][log.py:57]: Traceback (most recent call last):
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/decorator.py", line 30, in wrapper
+    result = func(*args, **kwargs)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/ruler.py", line 101, in run
+    return operator_func(left_value, right_value)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/ruler.py", line 18, in _regex_proc
+    match_pattern = re.compile(pattern)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/re.py", line 234, in compile
+    return _compile(pattern, flags)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/re.py", line 286, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/sre_compile.py", line 764, in compile
+    p = sre_parse.parse(p, flags)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/sre_parse.py", line 930, in parse
+    p = _parse_sub(source, pattern, flags & SRE_FLAG_VERBOSE, 0)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/sre_parse.py", line 426, in _parse_sub
+    not nested and not items))
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/sre_parse.py", line 532, in _parse
+    source.tell() - here)
+re.error: unterminated character set at position 23
+
+[0604-14:45:22][MainThread][I][log.py:57]: No exception node to handle exception.
+[0604-14:45:22][MainThread][D][log.py:57]: Not trek project under home path. [/Users/sero/dev/pentium/core.tool.python.mflow/aaaaa/bin]
+[0604-14:45:22][MainThread][D][log.py:57]: Not trek project under home path. [/Users/sero/dev/pentium/core.tool.python.mflow/aaaaa/mydemo]
+[0604-14:45:22][MainThread][D][log.py:57]: Not trek project under home path. [/Users/sero/dev/pentium/core.tool.python.mflow/aaaaa/myexcp]
+[0604-14:45:22][MainThread][D][log.py:57]: Not trek project under home path. [/Users/sero/dev/pentium/core.tool.python.mflow/aaaaa/build]
+[0604-14:45:22][MainThread][D][log.py:57]: Traceback (most recent call last):
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/decorator.py", line 30, in wrapper
+    result = func(*args, **kwargs)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/ruler.py", line 101, in run
+    return operator_func(left_value, right_value)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/ruler.py", line 18, in _regex_proc
+    match_pattern = re.compile(pattern)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/re.py", line 234, in compile
+    return _compile(pattern, flags)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/re.py", line 286, in _compile
+    p = sre_compile.compile(pattern, flags)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/sre_compile.py", line 764, in compile
+    p = sre_parse.parse(p, flags)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/sre_parse.py", line 930, in parse
+    p = _parse_sub(source, pattern, flags & SRE_FLAG_VERBOSE, 0)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/sre_parse.py", line 426, in _parse_sub
+    not nested and not items))
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/sre_parse.py", line 532, in _parse
+    source.tell() - here)
+re.error: unterminated character set at position 23
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/decorator.py", line 16, in wrapper
+    result = func(*args, **kwargs)
+  File "/Users/sero/.virtualenvs/test/bin/trek.py", line 370, in run
+    run_projects(path, detail, int(next_interval), auto, once)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/core.py", line 109, in run_projects
+    mgr.run(display_action_logs, next_interval, auto, once)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/manager.py", line 113, in run
+    self.flows_func("run", display_action_logs, next_interval, auto, once)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/manager.py", line 101, in flows_func
+    raise e
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/manager.py", line 98, in flows_func
+    getattr(flow, func_name)(*args, **kwargs)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/project/mflow.py", line 426, in run
+    self.workflow.run(event_data, next_interval)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/workflow.py", line 232, in run
+    self.exception_handling(e, event_data, source_node, target_node)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/workflow.py", line 240, in exception_handling
+    raise exception
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/workflow.py", line 225, in run
+    target_node = target_node.next(node_results)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/node.py", line 46, in next
+    if val.edge.can_go(data):
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/workflow/edge.py", line 53, in can_go
+    return ruler.run(self.filters, node_results)
+  File "/Users/sero/.virtualenvs/test/lib/python3.7/site-packages/pnmflow/decorator.py", line 37, in wrapper
+    raise exception_cls(error_msg, **except_kwargs)
+pnmflow.exceptions.WorkflowRulerError: ruler error => unterminated character set at position 23
+
+[0604-14:45:22][MainThread][D][log.py:57]: [run] time: 2.1639609336853027
+[0604-14:45:31][MainThread][D][log.py:57]: macro process: _local_ string, _local_
+[0604-14:45:32][MainThread][D][log.py:57]: Not trek project under home path. [/Users/sero/dev/pentium/core.tool.python.mflow/aaaaa/bin]
+[0604-14:45:32][MainThread][D][log.py:57]: Not trek project under home path. [/Users/sero/dev/pentium/core.tool.python.mflow/aaaaa/mydemo]
+[0604-14:45:32][MainThread][D][log.py:57]: Not trek project under home path. [/Users/sero/dev/pentium/core.tool.python.mflow/aaaaa/myexcp]
+[0604-14:45:32][MainThread][D][log.py:57]: Not trek project under home path. [/Users/sero/dev/pentium/core.tool.python.mflow/aaaaa/build]
+[0604-14:45:32][MainThread][D][log.py:57]: [run] time: 1.766308307647705
+[0604-14:47:17][MainThread][I][log.py:57]: starting blcks notification...
+[0604-14:47:34][MainThread][I][log.py:57]: starting trek-router...
+[0604-14:52:08][MainThread][I][log.py:57]: No exception node to handle exception.
+[0604-14:52:29][MainThread][I][log.py:57]: Attaching to notification, notification
+[0604-14:53:52][MainThread][I][log.py:57]: Attaching to notification, notification
+[0604-15:19:28][MainThread][I][log.py:57]: No exception node to handle exception.
+[0604-15:22:32][MainThread][I][log.py:57]: No exception node to handle exception.
+[0604-15:32:35][MainThread][I][log.py:57]: No exception node to handle exception.
+[0604-15:40:01][MainThread][I][log.py:57]: No exception node to handle exception.
+[0604-16:07:14][MainThread][I][log.py:57]: starting blcks notification...
+[0604-16:07:33][MainThread][I][log.py:57]: starting trek-router...
+[0604-16:19:48][MainThread][I][log.py:57]: closing blcks notification...
+[0604-16:19:58][MainThread][I][log.py:57]: closing trek-router...
+[0604-16:20:15][MainThread][I][log.py:57]: starting blcks notification...
+[0604-16:20:20][MainThread][I][log.py:57]: starting trek-router...
